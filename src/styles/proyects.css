@@ -1,0 +1,150 @@
+:root {
+    --color-dark: #0D1117;
+    --color-light: #FFFFFF;
+    --color-highlight: #E3FF6A;
+    --color-neon-green: #A4FF7A;
+    --color-deep-blue: #253c63;
+    --color-soft-gray: #8892B0;
+    
+    --gradient-main: linear-gradient(135deg, #1E293B 0%, #0D1117 100%);
+  }
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: var(--color-deep-blue);
+    color: var(--color-light);
+    margin: 0;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-dark);
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo{
+    flex: 1;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+  }
+  
+  .nav-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-light);
+    display: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    flex: 1;
+  }
+  
+  .nav-links li a{
+    color: white;
+    margin: 0 15px;
+    
+  }
+
+  .nav-links .contact{
+    margin-left: auto;
+  }
+  li{
+    padding: 8px;
+    font-size: 18px;
+  }
+  a{
+    text-decoration: none;
+  }
+
+  .aplicacionesweb{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--color-deep-blue);
+    padding: 20px;
+    gap: 30px;
+
+  }
+
+  .ecommerce, .restaurant, .tiendacomputo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    
+  }
+  .ecommerce img, .restaurant img, .tiendacomputo img{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+   margin-bottom: 10px;
+  }
+
+  .regresar{
+    display: flex;
+    justify-content: center;
+  }
+
+  .regresar button{
+    background-color: blue;
+    color: var(--color-light);
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 30px;
+    width: 40%;
+    font-size: 20px;
+  }
+
+  .regresar button:hover{
+    background: #A4FF7A;
+  }
+
+  .regresar button a{
+    color: var(--color-light);
+  }
+
+
+
+  /* Media query for mobile devices */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links .contact {
+    margin-left: 0;
+  }
+  .aplicacionesweb {
+    flex-direction: column; 
+    align-items: center; /* Centra los elementos en dispositivos móviles */
+  }
+}

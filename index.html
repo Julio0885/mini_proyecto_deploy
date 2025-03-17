@@ -1,109 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/main.css">
+    <script src="./src/scripts/habilidades.js" defer></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("Ze6rndJd6ROP-qcyU"); // Reemplaza YOUR_USER_ID con tu User ID de EmailJS
+        })();
+    </script>
     <title>MiniProyecto</title>
 </head>
+
 <body>
     <div>
         <header>
-            <img src="" alt="Logo" class="logo" class="logo"> 
+            <img src="" alt="Logo" class="logo" class="logo">
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
             <nav class="nav">
                 <ul class="nav-links">
-                    <li><a href="aboutme.html">About Me</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li> 
-                </ul>  
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="./proyectos.html">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
-            <div>
-                <button class="button">Contact</button>
-            </div>
         </header>
     </div>
-    <div>
+    <div id="aboutme">
         <section class="section">
-            <h2 class="desarrollador">I'm <span class="nombre">Julio Ramirez</span> Full Stack Development </h2>
+            <h2 class="desarrollador">I'm <span id="nombre" class="nombre">Julio Ramirez</span> Full Stack Development </h2>
             <div class="content">
                 <div class="card1">
                     <p>Cliente Review in Australia... <br>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam laborum 
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam laborum
                     </p>
                 </div>
                 <img src="./src/images/foto personal.JPG" alt="desarrollador" class="imgdesarrollador">
                 <div class="card2">
                     <p>MY EXPERTISE <br>
-                    FrontEnd ------------80% <br>
-                    CMS ---------------- 50% <br>
-                    Backend ------------ 70%</p>
+                        FrontEnd ------------80% <br>
+                        CMS ---------------- 50% <br>
+                        Backend ------------ 70%</p>
                 </div>
-            </div>   
-            <button type="submit" class="proyectos">Mis Proyectos</button>  
+            </div>
+            <button type="submit" class="proyectos">Mis Proyectos</button>
         </section>
     </div>
     <div class="content1">
         <section class="section2">
             <h2 class="descripcion">¿Quien Soy?</h2>
-        <div class="content2"> 
+            <div class="content2">
                 <div class="fotos-izquierda">
-                <div class="foto1">
-                    <img src="./src/images/equipo.png" alt="">
+                    <div class="foto1">
+                        <img src="./src/images/equipo.png" alt="">
+                    </div>
+                    <div class="foto2">
+                        <img src="./src/images/trabajdor1.png" alt="">
+                    </div>
                 </div>
-                <div class="foto2">
-                    <img src="./src/images/trabajdor1.png" alt="">
+                <p>Soy un programador full-stack apasionado con experiencia en el desarrollo de aplicaciones web <br>
+                    utilizando HTML, CSS, Tailwindcss. <br>
+                    manejo de Frameworks como Django, Flask y Node.js en el backend, <br>
+                    junto con bases de datos como PostgreSQL, MySQL y SQLite. <br>
+                    He trabajado con SQLAlchemy para la gestión de bases de datos en Flask. <br>
+                    En el frontend, estoy explorando con React y Angular <br> para mejorar el diseño y la experiencia de
+                    usuario en mis aplicaciones.
+                </p>
+                <div class="foto3">
+                    <img src="./src/images/trabajdor2.png" alt="">
                 </div>
             </div>
-            <p>Soy un programador full-stack apasionado con experiencia en el desarrollo de aplicaciones web <br>
-                 utilizando HTML, CSS, Tailwindcss. <br>
-                manejo de Frameworks como Django, Flask y Node.js en el backend, <br>
-                 junto con bases de datos como PostgreSQL, MySQL y SQLite. <br>
-                He trabajado con SQLAlchemy para la gestión de bases de datos en Flask. <br>
-                En el frontend, estoy explorando con React y Angular <br> para mejorar el diseño y la experiencia de usuario en mis aplicaciones. 
-            </p>
-            <div class="foto3">
-                <img src="./src/images/trabajdor2.png" alt="">
-            </div>
-        </div>
-        <button >SHOW MY PROJECTS</button>
-        </section>    
+            <button class="button2"><a href="./proyectos.html">SHOW MY PROJECTS</a></button>
+        </section>
     </div>
-    <div class="contenedor">
+    <div id="skills" class="contenedor">
         <h2>My Skills</h2>
         <div class="layout">
-            <section class="contenedor1">
-                <div>
+            <div class="contenedor1">
+                <div id="imagenes_card">
                     <img src="./src/images/assets/html-5.png" alt="Html">
-                    <img src="./src/images/assets/css-3.png" alt="Css">
-                    <img src="./src/images/assets/js.png" alt="Js">
-                    <img src="./src/images/assets/atom.png" alt="React">
-                    <img src="./src/images/assets/nextjs.jpg" alt="NextJs">
-                    <img src="./src/images/assets/programing.png" alt="jspr">
-                    <img src="./src/images/assets/tailwindcss.png" alt="tailwindcss">
-                    <img src="./src/images/assets/mongodb.png" alt="Mongodb">
+
                 </div>
-            </section>
+            </div>
             <div class="contenedor2">
-                <p>1 año de experiencia</p>
-                <button class="download">download CV</button>
-            </div>           
+                <p id="experiencia">1 año de experiencia</p>
+                <button class="download" onclick="showMessage()"><a href="./src/images/assets/curriculum/curriculum Sistemas  Julio César Ramirez Quezada.pdf" download>Download CV</a></button>
+            </div>
         </div>
         <div class="contenedor3">
             <h2>ADDITIONAL SKILLS</h2>
             <div class="contenedor3_imagen">
-                
-                 <img src="./src/images/assets/Angular.png" alt="">
-                 <img src="./src/images/assets/sqlserver.png" alt="">
-                 <img src="./src/images/assets/MySQL.png" alt="">
-                 <img src="./src/images/assets/postgresql.png" alt="">
+                <img  src="./src/images/assets/Angular.png" alt="Angular">
+                <img  src="./src/images/assets/sqlserver.png" alt="sqlserver">
+                <img  src="./src/images/assets/MySQL.png" alt="MySQL">
+                <img  src="./src/images/assets/postgresql.png" alt="PostgreSQL">
             </div>
-         </div>     
+        </div>
     </div>
     <div>
         <section class="section4">
             <div class="section4_content">
-                <h2> My Projects</h2>
-                <button><a href="https://www.github.com">Show my Proyects</a></button>
+                <h2> My Projects are my passion</h2>
+                <button><a href="./proyectos.html">Show my Proyects</a></button>
             </div>
             <div class="section4_img">
                 <img src="./src/images/assets/desarrollo_paginas_web_programador.jpg" alt="">
@@ -112,16 +114,27 @@
             </div>
         </section>
     </div>
-    <div class="layout2">
+    <div id="contact" class="layout2">
         <section class="section5">
             <h2>Contactanos</h2>
-                <form action="" class="contact">
-                    <input type="text" placeholder="Your Name"><br>
-                    <input type="email" placeholder="Email Address"><br>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button class="button">Enviar</button>
-                </form>
-         </section>
+            <form id="contactForm" class="contact">
+                <input id="name" type="text" placeholder="Your Name" onchange="handleNameChange()"><br>
+                <input id="email" type="email" placeholder="Email Address"><br>
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <button type="submit" class="button">Enviar</button>
+            </form>
+        </section>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('.nav');
+
+            navToggle.addEventListener('click', function () {
+                nav.classList.toggle('nav-visible');
+            });
+        });
+    </script>
 </body>
+
 </html>
